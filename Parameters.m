@@ -5,7 +5,7 @@ theta2R = deg2rad(85);
 theta3L = deg2rad(-20);
 theta3R = deg2rad(120);
 
-% absolute position(height, offset)
+% Initial D-H Parameters for alpha, a, d, theta.S
 dG1 = 235.5;
 
 a1I = 260;
