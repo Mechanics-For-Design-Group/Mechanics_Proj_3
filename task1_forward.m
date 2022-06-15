@@ -2,6 +2,12 @@
 Robot = IRB460();
 % get public parameters
 para = Robot.get_parameters();
+angle1L = para.angle1L;
+angle1R = para.angle1R;
+angle2L = para.angle2L;
+angle2R = para.angle2R;
+angle3L = para.angle3L;
+angle3R = para.angle3R;
 dG1 = para.dG1;
 a1I = para.a1I;
 d1I = para.d1I;
@@ -32,3 +38,13 @@ T46 = subs(T, [alpha, a, d, theta], [alpha46, a46, d46, 0]);
 
 TG6 = TG1 * T1I * TI2 * T23 * T34 * T46;
 simplify(TG6);
+
+dangle = 1;
+subs(angle2, angle2L);
+while angle2 <= angle2R
+    subs(angle3, angle3L);
+    while angle3 <= angle3R
+
+        subs(angle3, )
+    end
+end
