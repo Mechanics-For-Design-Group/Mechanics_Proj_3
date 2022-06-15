@@ -2,6 +2,12 @@
 Robot = IRB460();
 % get public parameters
 para = Robot.get_parameters();
+angle1L = para.angle1L;
+angle1R = para.angle1R;
+angle2L = para.angle2L;
+angle2R = para.angle2R;
+angle3L = para.angle3L;
+angle3R = para.angle3R;
 dG1 = para.dG1;
 a1I = para.a1I;
 d1I = para.d1I;
