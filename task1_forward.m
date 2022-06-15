@@ -29,3 +29,6 @@ TI2 = subs(T, [alpha, a, d, theta], [alphaI2, 0, 0, thetaI2+angle2]);
 T23 = subs(T, [alpha, a, d, theta], [0, a23, 0, theta23+angle3-angle2]);
 T34 = subs(T, [alpha, a, d, theta], [0, a34, 0, -angle3]);
 T46 = subs(T, [alpha, a, d, theta], [alpha46, a46, d46, 0]);
+
+TG6 = TG1 * T1I * TI2 * T23 * T34 * T46;
+simplify(TG6);
