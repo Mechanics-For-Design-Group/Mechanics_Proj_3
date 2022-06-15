@@ -39,12 +39,27 @@ T46 = subs(T, [alpha, a, d, theta], [alpha46, a46, d46, 0]);
 TG6 = TG1 * T1I * TI2 * T23 * T34 * T46;
 simplify(TG6);
 
-dangle = 1;
-subs(angle2, angle2L);
+dangle = deg2rad(10);
+angle1 = subs(angle1, angle1, angle1L);
+angle2 = subs(angle2, angle2, angle2L);
+angle3 = subs(angle3, angle3, angle3L);
+excutorCoord = eval(TG6 * [0;0;0;1]);
+xs = [excutorCoord(1)];
+ys = [excutorCoord(2)];
+figure(1)
+p1 = scatter(xs, ys);
+p1.XDataSource = 'xs';
+p1.YDataSource = 'ys';
+angle2 = subs(angle2, angle2, angle2L);
 while angle2 <= angle2R
-    subs(angle3, angle3L);
+    angle3 = subs(angle3, angle3, angle3L);
     while angle3 <= angle3R
-
-        subs(angle3, )
+        excutorCoord = eval(TG6 *[0;0;0;1]);
+        xs(end+1) = double(excutorCoord(1,1));
+        ys(end+1) = double(excutorCoord(2,1));
+        angle3 = subs(angle3, angle3, eval(angle3)+dangle);
+        refreshdata;
+        drawnow;
     end
+    angle2 = subs(angle2, angle2, eval(angle2)+dangle);
 end
