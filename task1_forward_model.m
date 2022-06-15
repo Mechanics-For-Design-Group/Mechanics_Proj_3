@@ -2,6 +2,12 @@
 Robot = IRB460();
 % get public parameters
 para = Robot.get_parameters();
+angle1L = para.angle1L;
+angle1R = para.angle1R;
+angle2L = para.angle2L;
+angle2R = para.angle2R;
+angle3L = para.angle3L;
+angle3R = para.angle3R;
 dG1 = para.dG1;
 a1I = para.a1I;
 d1I = para.d1I;
@@ -38,12 +44,13 @@ simplify(TG6);
 
 
 %通过改进D-H参数建立连杆，那个参数为变量就不写那个参数。
-L(1) = Link('d',dG1,  'theta',  0+angle1             , 'a' , 0   , 'alpha', 0       , 'qlim', [-pi,pi], 'modified');
-L(I) = Link('d',d1I,  'theta',  0                    , 'a' , a1I , 'alpha', 0       , 'qlim', [0 , 10], 'modified');
-L(2) = Link('d',0  ,  'theta',  thetaI2+angle2       , 'a' , 0   , 'alpha', alphaI2 , 'qlim', [-pi,pi], 'modified');
-L(3) = Link('d',0  ,  'theta',  theta23+angle3-angle2, 'a' , 0   , 'alpha', 0       , 'qlim', [-pi,pi], 'modified');
-L(4) = Link('d',0  ,  'theta',  -angle3              , 'a' , 0   , 'alpha', 0       , 'qlim', [-pi,pi], 'modified');
-L(6) = Link('d',d46,  'theta',  0                    , 'a' , a46 , 'alpha', alpha46 , 'qlim', [-pi,pi], 'modified');
-IRB460 = SerialLink(L, 'name' , 'IRB460');   %建立模型
+L(1) = Link('theta',  0+angle1             ,'d',dG1,   'a' , 0   , 'alpha', 0       , 'qlim', [angle1L,angle1R], 'modified');
+L(I) = Link('theta',  0                    ,'d',d1I,   'a' , a1I , 'alpha', 0       ,                            'modified');
+L(2) = Link('theta',  thetaI2+angle2       ,'d',0  ,   'a' , 0   , 'alpha', alphaI2 , 'qlim', [angle2L,angle2R], 'modified');
+L(3) = Link('theta',  theta23+angle3-angle2,'d',0  ,   'a' , 0   , 'alpha', 0       , 'qlim', [angle3L,angle3R], 'modified');
+L(4) = Link('theta',  -angle3              ,'d',0  ,   'a' , 0   , 'alpha', 0       ,                            'modified');
+L(6) = Link('theta',  0                    ,'d',d46,   'a' , a46 , 'alpha', alpha46 ,                            'modified');
+IRB460 = SerialLink(L);   %建立模型
+
 IRB460.plotopt = {'workspace',[-10,10,-10,10,-10,10],'tilesize',4};  %设置模型空间大小和地砖大小
 IRB460.teach;       %画出模型并进行调控
