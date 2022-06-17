@@ -31,7 +31,7 @@ classdef IRB460
             obj.parameters.a34 = 1025;
     
             obj.parameters.alpha46 = deg2rad(-90);
-            obj.parameters.a46 = 220; 
+            obj.parameters.a46 = 220;
             obj.parameters.d46 = 251.5;
         end
 
