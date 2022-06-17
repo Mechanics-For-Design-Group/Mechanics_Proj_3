@@ -39,8 +39,8 @@ T46 = subs(T, [alpha, a, d, theta], [alpha46, a46, d46, 0]);
 TG6 = TG1 * T1I * TI2 * T23 * T34 * T46;
 simplify(TG6);
 
+% Initialization of Drawing & Varibles
 dangle = deg2rad(5);
-% angle1 = subs(angle1, angle1, angle1L);
 angle1 = 0;
 angle2 = subs(angle2, angle2, angle2L);
 angle3 = subs(angle3, angle3, angle3L);
@@ -52,20 +52,20 @@ p1 = scatter(xs, zs);
 p1.XDataSource = 'xs';
 p1.YDataSource = 'zs';
 axis equal
-% angle2 = subs(angle2, angle2, angle2L);
-% while angle2 <= angle2R
-%     angle3 = subs(angle3, angle3, angle3L);
-%     while angle3 <= angle3R
-%         excutorCoord = eval(TG6*[0;0;0;1]);
-%         xs(end+1) = double(excutorCoord(1,1));
-%         zs(end+1) = double(excutorCoord(3,1));
-%         angle3 = subs(angle3, angle3, eval(angle3)+dangle);
-%         refreshdata;
-%         drawnow;
-%         % disp(rad2deg(eval(angle2)));
-%     end
-%     angle2 = subs(angle2, angle2, eval(angle2)+dangle);
-% end
+% Start Tracing
+angle2 = subs(angle2, angle2, angle2L);
+while angle2 <= angle2R
+    angle3 = subs(angle3, angle3, angle3L);
+    while angle3 <= angle3R
+        excutorCoord = eval(TG6*[0;0;0;1]);
+        xs(end+1) = double(excutorCoord(1,1));
+        zs(end+1) = double(excutorCoord(3,1));
+        angle3 = subs(angle3, angle3, eval(angle3)+dangle);
+        refreshdata;
+        drawnow;
+    end
+    angle2 = subs(angle2, angle2, eval(angle2)+dangle);
+end
 
 % test data 1
 angle1 = deg2rad(0);
