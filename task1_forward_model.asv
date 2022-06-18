@@ -1,7 +1,7 @@
 % make a instance of Parameters_Class
-Robo = IRB460();
+Robot = IRB460();
 % get public parameters
-para = Robo.get_parameters();
+para = Robot.get_parameters();
 angle1L = para.angle1L;
 angle1R = para.angle1R;
 angle2L = para.angle2L;
@@ -58,8 +58,6 @@ L(3) = Link([thetaI2+angle2         0     0    alphaI2 ], 'qlim', [angle2L,angle
 L(4) = Link([theta23+angle3-angle2  0     0    0       ], 'qlim', [angle3L,angle3R], 'modified');
 L(5) = Link([-angle3                0     0    0       ],                            'modified');
 L(6) = Link([0                      d46   a46  alpha46 ],                            'modified');
-Robot = SerialLink(L);   %建立模型
-Robot.display
-% IRB460.plotopt = {'workspace',[-10,10,-10,10,-10,10],'tilesize',4};  %设置模型空间大小和地砖大小
-%Robot.teach;       %画出模型并进行调控
-
+IRB460 = SerialLink([L(1),]);   %建立模型
+IRB460.display
+IRB460.teach;       %画出模型并进行调控
