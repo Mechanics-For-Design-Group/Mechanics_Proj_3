@@ -38,49 +38,42 @@ T46 = subs(T, [alpha, a, d, theta], [alpha46, a46, d46, 0]);
 
 TG6 = TG1 * T1I * TI2 * T23 * T34 * T46;
 simplify(TG6);
+P = TG6(1:3,4);
+simplify(P);
 
-% Initialization of Drawing & Varibles
-dangle = deg2rad(5);
-angle1 = subs(angle1, angle1, 0);
-angle2 = subs(angle2, angle2, angle2L);
-angle3 = subs(angle3, angle3, angle3L);
-excutorCoord = eval(TG6 * [0;0;0;1]);
-xs = [excutorCoord(1,1)];
-zs = [excutorCoord(3,1)];
-figure(1)
-p1 = scatter(xs, zs);
-p1.XDataSource = 'xs';
-p1.YDataSource = 'zs';
-axis equal
-% Start Tracing
-angle2 = subs(angle2, angle2, angle2L);
-while angle2 <= angle2R
-    angle3 = subs(angle3, angle3, angle3L);
-    while angle3 <= angle3R
-        excutorCoord = eval(TG6*[0;0;0;1]);
-        xs(end+1) = double(excutorCoord(1,1));
-        zs(end+1) = double(excutorCoord(3,1));
-        angle3 = subs(angle3, angle3, eval(angle3)+dangle);
-        refreshdata;
-        drawnow;
-    end
-    angle2 = subs(angle2, angle2, eval(angle2)+dangle);
-end
+J = [diff(P(1),angle1), diff(P(1),angle2), diff(P(1),angle3);...
+    diff(P(2),angle1), diff(P(2),angle2), diff(P(2),angle3);...
+    diff(P(3),angle1), diff(P(3),angle2), diff(P(3),angle3);...
+    ];
+simplify(J);
+
+syms angle1dot angle2dot angle3dot
+Xdot = J*[angle1dot;angle2dot;angle3dot];
+simplify(Xdot);
 
 % test data 1
 angle1 = deg2rad(0);
 angle2 = deg2rad(0);
 angle3 = deg2rad(0);
-output1 = eval(TG6*[0;0;0;1]);
+angle1dot = deg2rad(0);
+angle2dot = deg2rad(0);
+angle3dot = deg2rad(0);
+output1 = eval(J*[angle1dot;angle2dot;angle3dot]);
 
 % test data 2
-angle1 = deg2rad(30);
-angle2 = deg2rad(30);
-angle3 = deg2rad(30);
-output2 = eval(TG6*[0;0;0;1]);
+angle1 = deg2rad(0);
+angle2 = deg2rad(0);
+angle3 = deg2rad(0);
+angle1dot = deg2rad(30);
+angle2dot = deg2rad(30);
+angle3dot = deg2rad(30);
+output2 = eval(J*[angle1dot;angle2dot;angle3dot]);
 
 % test data 3
-angle1 = deg2rad(60);
-angle2 = deg2rad(60);
-angle3 = deg2rad(60);
-output3 = eval(TG6*[0;0;0;1]);
+angle1 = deg2rad(0);
+angle2 = deg2rad(0);
+angle3 = deg2rad(0);
+angle1dot = deg2rad(60);
+angle2dot = deg2rad(60);
+angle3dot = deg2rad(60);
+output3 = eval(J*[angle1dot;angle2dot;angle3dot]);
