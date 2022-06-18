@@ -40,8 +40,8 @@ classdef IRB460
             obj.parameters.C7_3=[0;-200;0];
             obj.parameters.S1_G=[-264.88;0;140.84];
             obj.parameters.SC8=[-3;0;60];
-            obj.parameters.C9_3=[984.96;0;0];
-            obj.parameters.C11_4=[124.94;0;0];
+            obj.parameters.C9_3=[];
+            obj.parameters.C11_4=[];
         end
 
         % get parameters
