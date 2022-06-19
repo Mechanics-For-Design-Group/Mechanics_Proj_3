@@ -32,6 +32,17 @@ SC8_1;
 C9_3;
 S2_1;
 C11_4;
+% masses
+m1;
+m2;
+m4;
+m5;
+m6;
+m7;
+m8;
+m9;
+m10;
+m11;
 
 % establish T from alpha, a, d, theta
 syms alpha a d theta
@@ -93,11 +104,20 @@ C5_G = trans(TG1, C5_1);
 C6_G = trans(TG2, C6_2);
 C7_G = trans(TG3, C7_3);
 C8_1 = org(T13) + SC8_1;
-C8_G = trnas(TG1, C8_1);
+C8_G = trans(TG1, C8_1);
 C9_G = trans(TG3, C9_3);
 C10_1 = org(T13) + S2_1 + trans(T13, C9_3);
 C10_G = trans(TG1, C10_1);
 C11_G = trans(TG4, C11_4);
+
+g = [0;0;-9.8];
+V_G = g*(m1*C1_G + m2*C2_G + m4*C4_G + m5*C5_G + m6*C6_G + m7*C7_G + m8*C8_G + m9*C9_G + m10*C10_G + m11*C11_G);
+tau1 = diff(V_G,angle1);
+simplify(tau1);
+tau2 = diff(V_G,angle2);
+simplify(tau2);
+tau3 = diff(V_G,angle3);
+simplify(tau3);
 
 % Functions: org, trans(calls transformed_p actually).
 % function Mt = trunc_M(M, r1, r2, c1, c2)
