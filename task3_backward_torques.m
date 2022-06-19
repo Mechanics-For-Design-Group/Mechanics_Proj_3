@@ -2,12 +2,14 @@
 Robot = IRB460();
 % get public parameters
 para = Robot.get_parameters();
+% angles range
 angle1L = para.angle1L;
 angle1R = para.angle1R;
 angle2L = para.angle2L;
 angle2R = para.angle2R;
 angle3L = para.angle3L;
 angle3R = para.angle3R;
+% D-H parameters
 dG1 = para.dG1;
 a1I = para.a1I;
 d1I = para.d1I;
@@ -19,7 +21,7 @@ a34 = para.a34;
 alpha46 = para.alpha46;
 a46 = para.a46;
 d46 = para.d46;
-
+% COMs
 C1_1;
 C7_3;
 C6_2;
