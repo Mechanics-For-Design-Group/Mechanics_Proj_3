@@ -20,6 +20,17 @@ alpha46 = para.alpha46;
 a46 = para.a46;
 d46 = para.d46;
 
+C1_1;
+C7_3;
+C6_2;
+Q1_3;
+S1_1;
+C6_2;
+SC8_1;
+C9_3;
+S2_1;
+C11_4;
+
 % establish T from alpha, a, d, theta
 syms alpha a d theta
 T = [cos(theta), -sin(theta), 0, a;
@@ -63,11 +74,13 @@ simplify(TG4);
 TG6 = TG4 * T46;
 simplify(TG6);
 
+% other Ts
 T12 = T1I*TI2;
 simplify(T12);
 T13 = T12*T23;
 simplify(T13);
 
+% every COM(center of mass), relative to G
 C1_G = trans(TG1, C1_1);
 C2_3 = C7_3 + org(T32);
 C2_G = trans(TG3, C2_3);
