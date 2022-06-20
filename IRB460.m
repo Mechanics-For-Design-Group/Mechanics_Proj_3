@@ -43,9 +43,20 @@ classdef IRB460
             % obj.parameters.C9_3=[984.96;0;0];
             % obj.parameters.C11_4=[124.94;0;0];
 
-            obj.parameters.C0_G=[-0.202;8.370;107.46];
-            obj.parameters.C1_1=[-22.763;147.973;333.194];
-            obj.parameters.SC2_3=[-0.208;-123.447;21.675];
+            obj.parameters.C0_G = [-0.202; 8.370; 107.46];
+            obj.parameters.C1_1 = [-22.763; 147.973; 333.194];
+            obj.parameters.SC2_3 = [-0.208; -123.447; 21.675];
+            obj.parameters.SC4_2 = [472.5; 0; -37.163];
+            obj.parameters.Q1_3 = [-945; 0; 0];
+            obj.parameters.S1_1 = [-274.88; 0; 140.84];
+            obj.parameters.SC5_2 = [472.5; -29.525; -261.5];
+            obj.parameters.C6_2 = [395.286; 23.441; 18.027];
+            obj.parameters.C7_3 = [-200; 0; 0];
+            obj.parameters.SC8_1 = [-41.55; 0; 115.34];
+            obj.parameters.C9_3 = [512.5; 0; 0];
+            obj.parameters.S2_1 = [227.85; 0; 196.15];
+            obj.parameters.SC10_3 = [512.5; 0; -164.5];
+            obj.parameters.C11_4 = [158.779; 68.352; -28.625];
 
         end
 
