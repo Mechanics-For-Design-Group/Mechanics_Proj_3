@@ -9,7 +9,12 @@ Output:
 > x = 1505;  
 > y = 0;  
 > z = 1436;
-> 
+
+Adams ：
+> x = 1505;  
+> y = 0;  
+> z = 1436;
+>
 ## Data 2
 Input:
 > angle1 = deg2rad(30);  
@@ -21,6 +26,10 @@ Output:
 > y = 920.088;  
 > z = 796.894;
 > 
+Adams ：
+> x = 1505;  
+> y = 0;  
+> z = 1436;
 ## Data 3
 Input:
 > angle1 = deg2rad(60);  
@@ -31,6 +40,10 @@ Output:
 > x = 905.4470;  
 > y = 1568.3;  
 > z = 75.824;
+Adams ：
+> x = 1505;  
+> y = 0;  
+> z = 1436;
 
 # Task 2: Forward Jacobian
 ## Data 1
@@ -46,6 +59,10 @@ Output:
 > xdot = 0;  
 > ydot = 0;  
 > zdot = 0;  
+Adams ：
+> x = 1505;  
+> y = 0;  
+> z = 1436;
 
 ## Data 2
 Input:
@@ -61,7 +78,10 @@ Output:
 > xdot = 494.8008;  
 > ydot = 788.0162;  
 > zdot = -536.6887;  
-
+Adams ：
+> x = 1505;  
+> y = 0;  
+> z = 1436;
 ## Data 3
 Input:
 > angle1 = deg2rad(0);  
@@ -75,10 +95,24 @@ Output:
 > xdot = 989.6017;  
 > ydot = 1576;  
 > zdot = -1073; 
-
+Adams ：
+> x = 1505;  
+> y = 0;  
+> z = 1436;
 
 # Task 3
-
+Adams ：
+> x = 1505;  
+> y = 0;  
+> z = 1436;
+Adams ：
+> x = 1505;  
+> y = 0;  
+> z = 1436;
+Adams ：
+> x = 1505;  
+> y = 0;  
+> z = 1436;
 # Task 4
 
 # Task 5
