@@ -43,6 +43,7 @@ classdef IRB460
             % obj.parameters.C9_3=[984.96;0;0];
             % obj.parameters.C11_4=[124.94;0;0];
 
+            % new version of COMs
             obj.parameters.C0_G = [-0.202; 8.370; 107.46];
             obj.parameters.C1_1 = [-22.763; 147.973; 333.194];
             obj.parameters.SC2_3 = [-0.208; -123.447; 21.675];
@@ -58,9 +59,10 @@ classdef IRB460
             obj.parameters.SC10_3 = [512.5; 0; -164.5];
             obj.parameters.C11_4 = [158.779; 68.352; -28.625];
 
-            % 1000kg/m^3
+            % desity: 1000kg/m^3
             obj.parameters.rho = 1000;
 
+            % masses of each moving parts
             obj.parameters.m1 = 65.561;
             obj.parameters.m2 = 5.282;
             obj.parameters.m4 = 2.946;
