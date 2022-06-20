@@ -15,7 +15,7 @@ a1I = para.a1I;
 d1I = para.d1I;
 alphaI2 = para.alphaI2;
 thetaI2 = para.thetaI2;
-a23 = para.a23;w
+a23 = para.a23;
 theta23 = para.theta23;
 a34 = para.a34;
 alpha46 = para.alpha46;
@@ -78,7 +78,7 @@ T1G = inv(TG1);
 simplify(T1G);
 TI1 = inv(T1I);
 simplify(TI1);
-T2I = inv(T2I);
+T2I = inv(TI2);
 simplify(T2I);
 T32 = inv(T23);
 simplify(T32);
@@ -142,7 +142,7 @@ C11_G = trans(TG4, C11_4);
 
 % get V_G
 g = [0;0;-9.8];
-V_G = g*(m1*C1_G + m2*C2_G + m4*C4_G + m5*C5_G + m6*C6_G + m7*C7_G + m8*C8_G + m9*C9_G + m10*C10_G + m11*C11_G);
+V_G = (g')*(m1*C1_G + m2*C2_G + m4*C4_G + m5*C5_G + m6*C6_G + m7*C7_G + m8*C8_G + m9*C9_G + m10*C10_G + m11*C11_G);
 
 % already had TG6, get Jacobian
 P = TG6(1:3,4);

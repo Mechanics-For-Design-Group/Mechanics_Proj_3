@@ -58,6 +58,19 @@ classdef IRB460
             obj.parameters.SC10_3 = [512.5; 0; -164.5];
             obj.parameters.C11_4 = [158.779; 68.352; -28.625];
 
+            % 1000kg/m^3
+            obj.parameters.rho = 1000;
+
+            obj.parameters.m1 = 65.561;
+            obj.parameters.m2 = 5.282;
+            obj.parameters.m4 = 2.946;
+            obj.parameters.m5 = 1.443;
+            obj.parameters.m6 = 12.418;
+            obj.parameters.m7 = (1/4)*9.698;
+            obj.parameters.m8 = 2.851;
+            obj.parameters.m9 = (3/4)*9.698;
+            obj.parameters.m10 = 1.416;
+            obj.parameters.m11 = 6.013;
         end
 
         % get parameters
