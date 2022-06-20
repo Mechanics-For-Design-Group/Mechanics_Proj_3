@@ -32,8 +32,8 @@ d46 = para.d46;
 % C9_3;
 % S2_1;
 % C11_4;
-C1_1;
-SC2_3;
+C1_1 = para.C1_1;
+SC2_3 = para.SC2_3;
 SC4_2;
 Q1_3;
 S1_1;
@@ -160,19 +160,34 @@ simplify(part3);
 
 % final Tau formula
 syms fx fy fz
-Tau = [part1;part2;part3] + J'*[fx;fy;fz];
+Tau = [part1;part2;part3] + (J')*[fx;fy;fz];
 
 % test data 1
+angle1 = deg2rad(30);
+angle2 = deg2rad(30);
+angle3 = deg2rad(30);
 fx = 50;
 fy = 50;
 fz = 50;
 outputTau1 = eval(Tau);
 
 % test data 2
+angle1 = deg2rad(30);
+angle2 = deg2rad(30);
+angle3 = deg2rad(30);
 fx = 100;
 fy = 100;
-fz = 200;
+fz = 100;
 outputTau2 = eval(Tau);
+
+% test data 3
+angle1 = deg2rad(30);
+angle2 = deg2rad(30);
+angle3 = deg2rad(30);
+fx = 300;
+fy = 300;
+fz = 300;
+outputTau3 = eval(Tau);
 
 
 % Functions: org, trans(calls transformed_p actually).
