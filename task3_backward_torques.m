@@ -32,30 +32,30 @@ d46 = para.d46;
 % C9_3;
 % S2_1;
 % C11_4;
-C1_1;
-SC2_3;
-SC4_2;
-Q1_3;
-S1_1;
-SC5_2;
-C6_2;
-C7_3;
-SC8_1;
-C9_3;
-S2_1;
-SC10_3;
-C11_4;
+C1_1 = para.C1_1;
+SC2_3 = para.SC2_3;
+SC4_2 = para.SC4_2;
+Q1_3 = para.Q1_3;
+S1_1 = para.S1_1;
+SC5_2 = para.SC5_2;
+C6_2 = para.C6_2;
+C7_3 = para.C7_3;
+SC8_1 = para.SC8_1;
+C9_3 = para.C9_3;
+S2_1 = para.S2_1;
+SC10_3 = para.SC10_3;
+C11_4 = para.C11_4;
 % masses
-m1;
-m2;
-m4;
-m5;
-m6;
-m7;
-m8;
-m9;
-m10;
-m11;
+m1 = para.m1;
+m2 = para.m2;
+m4 = para.m4;
+m5 = para.m5;
+m6 = para.m6;
+m7 = para.m7;
+m8 = para.m8;
+m9 = para.m9;
+m10 = para.m10;
+m11 = para.m11;
 
 % establish T from alpha, a, d, theta
 syms alpha a d theta
@@ -123,6 +123,7 @@ simplify(T13);
 % C10_G = trans(TG1, C10_1);
 % C11_G = trans(TG4, C11_4);
 
+% new version of Cs_G
 C1_G = trans(TG1, C1_1);
 C2_3 = org(T32) + SC2_3;
 C2_G = trans(TG3, C2_3);
@@ -139,14 +140,57 @@ C10_1 = org(T13) + S2_1 + trans(T13, SC10_3);
 C10_G = trans(TG1, C10_1);
 C11_G = trans(TG4, C11_4);
 
+% get V_G
 g = [0;0;-9.8];
 V_G = g*(m1*C1_G + m2*C2_G + m4*C4_G + m5*C5_G + m6*C6_G + m7*C7_G + m8*C8_G + m9*C9_G + m10*C10_G + m11*C11_G);
-tau1 = diff(V_G,angle1);
-simplify(tau1);
-tau2 = diff(V_G,angle2);
-simplify(tau2);
-tau3 = diff(V_G,angle3);
-simplify(tau3);
+
+% already had TG6, get Jacobian
+P = TG6(1:3,4);
+simplify(P);
+J = [diff(P(1),angle1), diff(P(1),angle2), diff(P(1),angle3);...
+    diff(P(2),angle1), diff(P(2),angle2), diff(P(2),angle3);...
+    diff(P(3),angle1), diff(P(3),angle2), diff(P(3),angle3);...
+    ];
+simplify(J);
+
+part1 = diff(V_G,angle1);
+simplify(part1);
+part2 = diff(V_G,angle2);
+simplify(part2);
+part3 = diff(V_G,angle3);
+simplify(part3);
+
+% final Tau formula
+syms fx fy fz
+Tau = [part1;part2;part3] + (J')*[fx;fy;fz];
+
+% test data 1
+angle1 = deg2rad(30);
+angle2 = deg2rad(30);
+angle3 = deg2rad(30);
+fx = 50;
+fy = 50;
+fz = 50;
+outputTau1 = eval(Tau);
+
+% test data 2
+angle1 = deg2rad(30);
+angle2 = deg2rad(30);
+angle3 = deg2rad(30);
+fx = 100;
+fy = 100;
+fz = 100;
+outputTau2 = eval(Tau);
+
+% test data 3
+angle1 = deg2rad(30);
+angle2 = deg2rad(30);
+angle3 = deg2rad(30);
+fx = 300;
+fy = 300;
+fz = 300;
+outputTau3 = eval(Tau);
+
 
 % Functions: org, trans(calls transformed_p actually).
 % function Mt = trunc_M(M, r1, r2, c1, c2)
