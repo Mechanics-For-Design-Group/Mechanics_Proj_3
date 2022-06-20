@@ -34,14 +34,19 @@ classdef IRB460
             obj.parameters.a46 = 220;
             obj.parameters.d46 = 251.5;
 
-            obj.parameters.C0_G=[-8.37;-0.202;107.46];
-            obj.parameters.C1_1=[-147.973;-22.763;347.734];
-            obj.parameters.C6_2=[0;894.7/2;0];
-            obj.parameters.C7_3=[0;-200;0];
-            obj.parameters.S1_G=[-264.88;0;140.84];
-            obj.parameters.SC8=[-3;0;60];
-            obj.parameters.C9_3=[984.96;0;0];
-            obj.parameters.C11_4=[124.94;0;0];
+            % obj.parameters.C0_G=[-8.37;-0.202;107.46];
+            % obj.parameters.C1_1=[-147.973;-22.763;347.734];
+            % obj.parameters.C6_2=[0;894.7/2;0];
+            % obj.parameters.C7_3=[0;-200;0];
+            % obj.parameters.S1_G=[-264.88;0;140.84];
+            % obj.parameters.SC8=[-3;0;60];
+            % obj.parameters.C9_3=[984.96;0;0];
+            % obj.parameters.C11_4=[124.94;0;0];
+
+            obj.parameters.C0_G=[-0.202;8.370;107.46];
+            obj.parameters.C1_1=[-22.763;147.973;333.194];
+            obj.parameters.SC2_3=[-0.208;-123.447;21.675];
+
         end
 
         % get parameters
