@@ -34,14 +34,45 @@ classdef IRB460
             obj.parameters.a46 = 220;
             obj.parameters.d46 = 251.5;
 
-            obj.parameters.C0_G=[-8.37;-0.202;107.46];
-            obj.parameters.C1_1=[-147.973;-22.763;347.734];
-            obj.parameters.C6_2=[0;894.7/2;0];
-            obj.parameters.C7_3=[0;-200;0];
-            obj.parameters.S1_G=[-264.88;0;140.84];
-            obj.parameters.SC8=[-3;0;60];
-            obj.parameters.C9_3=[984.96;0;0];
-            obj.parameters.C11_4=[124.94;0;0];
+            % obj.parameters.C0_G=[-8.37;-0.202;107.46];
+            % obj.parameters.C1_1=[-147.973;-22.763;347.734];
+            % obj.parameters.C6_2=[0;894.7/2;0];
+            % obj.parameters.C7_3=[0;-200;0];
+            % obj.parameters.S1_G=[-264.88;0;140.84];
+            % obj.parameters.SC8=[-3;0;60];
+            % obj.parameters.C9_3=[984.96;0;0];
+            % obj.parameters.C11_4=[124.94;0;0];
+
+            % new version of COMs
+            obj.parameters.C0_G = [-0.202; 8.370; 107.46];
+            obj.parameters.C1_1 = [-22.763; 147.973; 333.194];
+            obj.parameters.SC2_3 = [-0.208; -123.447; 21.675];
+            obj.parameters.SC4_2 = [472.5; 0; -37.163];
+            obj.parameters.Q1_3 = [-945; 0; 0];
+            obj.parameters.S1_1 = [-274.88; 0; 140.84];
+            obj.parameters.SC5_2 = [472.5; -29.525; -261.5];
+            obj.parameters.C6_2 = [395.286; 23.441; 18.027];
+            obj.parameters.C7_3 = [-200; 0; 0];
+            obj.parameters.SC8_1 = [-41.55; 0; 115.34];
+            obj.parameters.C9_3 = [512.5; 0; 0];
+            obj.parameters.S2_1 = [227.85; 0; 196.15];
+            obj.parameters.SC10_3 = [512.5; 0; -164.5];
+            obj.parameters.C11_4 = [158.779; 68.352; -28.625];
+
+            % desity: 1000kg/m^3
+            obj.parameters.rho = 1000;
+
+            % masses of each moving parts
+            obj.parameters.m1 = 65.561;
+            obj.parameters.m2 = 5.282;
+            obj.parameters.m4 = 2.946;
+            obj.parameters.m5 = 1.443;
+            obj.parameters.m6 = 12.418;
+            obj.parameters.m7 = (1/4)*9.698;
+            obj.parameters.m8 = 2.851;
+            obj.parameters.m9 = (3/4)*9.698;
+            obj.parameters.m10 = 1.416;
+            obj.parameters.m11 = 6.013;
         end
 
         % get parameters
