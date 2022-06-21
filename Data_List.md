@@ -13,7 +13,7 @@ Output:
 Adams ：
 > x = 1505;  
 > y = 0;  
-> z = 1436;  
+> z = 1471;  
 >
 ## Data 2
 Input:
@@ -27,9 +27,9 @@ Output:
 > z = 796.894;
 > 
 Adams ：
-> x = 1505;  
-> y = 0;  
-> z = 1436;
+> x = 1587;  
+> y = 911.4;  
+> z = 816.5;
 ## Data 3
 Input:
 > angle1 = deg2rad(60);  
@@ -42,9 +42,9 @@ Output:
 > z = 75.824;
 
 Adams ：
-> x = 1505;  
-> y = 0;  
-> z = 1436;
+> x = 1548;  
+> y = 902.0;  
+> z = 102.0;
 
 # Task 2: Forward Jacobian
 ## Data 1
