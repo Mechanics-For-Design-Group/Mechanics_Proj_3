@@ -61,18 +61,18 @@ angle3dot = deg2rad(0);
 output1 = eval(J*[angle1dot;angle2dot;angle3dot]);
 
 % test data 2
-angle1 = deg2rad(0);
-angle2 = deg2rad(0);
-angle3 = deg2rad(0);
+angle1 = deg2rad(30);
+angle2 = deg2rad(30);
+angle3 = deg2rad(30);
 angle1dot = deg2rad(30);
 angle2dot = deg2rad(30);
 angle3dot = deg2rad(30);
 output2 = eval(J*[angle1dot;angle2dot;angle3dot]);
 
 % test data 3
-angle1 = deg2rad(0);
-angle2 = deg2rad(0);
-angle3 = deg2rad(0);
+angle1 = deg2rad(60);
+angle2 = deg2rad(60);
+angle3 = deg2rad(60);
 angle1dot = deg2rad(60);
 angle2dot = deg2rad(60);
 angle3dot = deg2rad(60);
