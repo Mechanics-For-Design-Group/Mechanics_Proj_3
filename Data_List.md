@@ -105,7 +105,57 @@ Adams ：
 > z = 1436;
 
 # Task 3
+## Data 1
+Input:
+> angle1 = deg2rad(30);  
+> angle2 = deg2rad(30);  
+> angle3 = deg2rad(30);  
+> fx = 50;  
+> fy = 50;  
+> fz = 50;  
 
+Output:
+> tau1 = 33678;  
+> tau2 = 181300;  
+> tau3 = -13841;
+
+Adams ：
+> x = 1505;  
+> y = 0;  
+> z = 1436;
+
+## Data 2
+Input:
+> angle1 = deg2rad(30);  
+> angle2 = deg2rad(30);  
+> angle3 = deg2rad(30);  
+> fx = 100;  
+> fy = 100;  
+> fz = 100;  
+
+Output:
+> tau1 = 67355;  
+> tau2 = 213570;  
+> tau3 = -93229;
+
+## Data 3
+Input:
+> angle1 = deg2rad(30);  
+> angle2 = deg2rad(30);  
+> angle3 = deg2rad(30);  
+> fx = 300;  
+> fy = 300;  
+> fz = 300;  
+
+Output:
+> tau1 = 202070;  
+> tau2 = 342660;  
+> tau3 = -410780;
+
+Adams:
+> tau1 = 202070;  
+> tau2 = 342660;  
+> tau3 = -410780;
 # Task 4
 
 # Task 5
