@@ -62,15 +62,15 @@ Output:
 > zdot = 0;  
 
 Adams ：  
-> x = 1505;  
-> y = 0;  
-> z = 1436;  
+> xdot = 0;  
+> ydot = 0;  
+> zdot = 0;  
 
 ## Data 2
 Input:
-> angle1 = deg2rad(0);  
-> angle2 = deg2rad(0);  
-> angle3 = deg2rad(0);  
+> angle1 = deg2rad(30);  
+> angle2 = deg2rad(30);  
+> angle3 = deg2rad(30);  
 > angle1dot = deg2rad(30);  
 > angle2dot = deg2rad(30);  
 > angle3dot = deg2rad(30);  
@@ -87,9 +87,9 @@ Adams ：
 > z = 1436;  
 ## Data 3
 Input:
-> angle1 = deg2rad(0);  
-> angle2 = deg2rad(0);  
-> angle3 = deg2rad(0);  
+> angle1 = deg2rad(30);  
+> angle2 = deg2rad(30);  
+> angle3 = deg2rad(30);  
 > angle1dot = deg2rad(60);  
 > angle2dot = deg2rad(60);  
 > angle3dot = deg2rad(60);  
@@ -120,9 +120,9 @@ Output:
 > tau3 = -13841;
 
 Adams ：
-> x = 1505;  
-> y = 0;  
-> z = 1436;
+> tau1 = 59480;  
+> tau2 = 245600;  
+> tau3 = -15730;
 
 ## Data 2
 Input:
@@ -137,6 +137,11 @@ Output:
 > tau1 = 67355;  
 > tau2 = 213570;  
 > tau3 = -93229;
+
+Adams ：
+> tau1 = 14130;  
+> tau2 = 791200;  
+> tau3 = -16700;
 
 ## Data 3
 Input:
@@ -153,9 +158,9 @@ Output:
 > tau3 = -410780;
 
 Adams:
-> tau1 = 202070;  
-> tau2 = 342660;  
-> tau3 = -410780;
+> tau1 = 440600;  
+> tau2 = 951200;  
+> tau3 = -372000;
 # Task 4
 
 # Task 5
