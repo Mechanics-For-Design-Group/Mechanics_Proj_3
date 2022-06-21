@@ -57,9 +57,9 @@ Input:
 > angle3dot = deg2rad(0);  
 
 Output:
-> xdot = -343.0494;  
-> ydot = 914.5104;  
-> zdot = -712.1865;  
+> xdot = 0;  
+> ydot = 0;  
+> zdot = 0;  
 
 Adams ：  
 > xdot = 0;  
@@ -75,16 +75,16 @@ Input:
 > angle2dot = deg2rad(30);  
 > angle3dot = deg2rad(30);  
 
-
 Output:
-> xdot = 1859.7;  
-> ydot = 571.6589;  
-> zdot = -1393.7;  
+> xdot = -343.0494;  
+> ydot = 914.5104;  
+> zdot = -712.1865; 
 
 Adams ：  
-> x = 1505;  
-> y = 0;  
-> z = 1436;  
+> x = -410.0;  
+> y = 815.2;  
+> z = -784.1;  
+
 ## Data 3
 Input:
 > angle1 = deg2rad(30);  
@@ -95,14 +95,14 @@ Input:
 > angle3dot = deg2rad(60);  
 
 Output:
-> xdot = 989.6017;  
-> ydot = 1576;  
-> zdot = -1073;  
+> xdot = -1859.7;  
+> ydot = 571.6589;  
+> zdot = -1393.37;  
 
 Adams ：
-> x = 1505;  
-> y = 0;  
-> z = 1436;
+> x = -1727;  
+> y = 290.2;  
+> z = 857.0;
 
 # Task 3
 ## Data 1
