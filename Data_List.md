@@ -57,9 +57,9 @@ Input:
 > angle3dot = deg2rad(0);  
 
 Output:
-> xdot = 0;  
-> ydot = 0;  
-> zdot = 0;  
+> xdot = -343.0494;  
+> ydot = 914.5104;  
+> zdot = -712.1865;  
 
 Adams ：  
 > xdot = 0;  
@@ -77,9 +77,9 @@ Input:
 
 
 Output:
-> xdot = 494.8008;  
-> ydot = 788.0162;  
-> zdot = -536.6887;  
+> xdot = 1859.7;  
+> ydot = 571.6589;  
+> zdot = -1393.7;  
 
 Adams ：  
 > x = 1505;  
